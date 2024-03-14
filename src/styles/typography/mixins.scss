@@ -1,0 +1,111 @@
+@use "./constants" as constants;
+
+/* Font Styles */
+
+/* Default paragraph */
+@mixin default-text-style {
+  @include body;
+  color: var(--text-color);
+  font-weight: constants.$font-weight-normal;
+  font-family: constants.$font-family-base;
+}
+
+/* paragraph */
+@mixin body {
+  font-size: 1rem;
+  line-height: 1.2;
+  letter-spacing: normal;
+}
+
+/* Heading 1 */
+@mixin h1 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+/* Heading 2 */
+@mixin h2 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+/* Heading 3 */
+@mixin h3 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+/* Heading 4 */
+@mixin h4 {
+  font-size: 3rem;
+  line-height: 1;
+}
+/* Heading 5 */
+@mixin h5 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+/* Heading 6 */
+@mixin h6 {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+/* Label */
+@mixin label {
+  @include body;
+  font-weight: 500;
+}
+
+/* Inline Code */
+@mixin code-inline {
+  font-size: 1rem;
+}
+
+/* Code Block */
+@mixin code-block {
+  font-size: 1rem;
+}
+
+/**
+ * Media Queries for Font Styles
+ *
+ * @include styles.font();
+ * @include styles.font('body');
+ * @include styles.font('h1');
+ */
+@mixin font($font-size) {
+  @if $font-size == body {
+    @include body;
+  }
+  @if $font-size == h1 {
+    @include h1;
+  }
+  @if $font-size == h2 {
+    @include h2;
+  }
+  @if $font-size == h3 {
+    @include h3;
+  }
+  @if $font-size == h4 {
+    @include h4;
+  }
+  @if $font-size == h5 {
+    @include h5;
+  }
+  @if $font-size == h6 {
+    @include h6;
+  }
+  @if $font-size == label {
+    @include label;
+  }
+  @if $font-size == code-inline {
+    @include code-inline;
+  }
+  @if $font-size == code-block {
+    @include code-block;
+  } @else {
+    @include body;
+  }
+}

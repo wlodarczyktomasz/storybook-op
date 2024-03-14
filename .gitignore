@@ -1,0 +1,30 @@
+
+# dependencies
+/node_modules
+
+# testing
+/coverage
+
+# production
+dist/
+dist/*
+dist/**/*
+dist/index.d.ts
+dist/esm
+dist/cjs
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+
+.nyc_output
+stats
+stats.html
+
+/storybook/build-storybook.log
+/storybook/storybook-static
+/storybook/node_modules
