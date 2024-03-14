@@ -1,6 +1,6 @@
 {
   "name": "@wlodarczyktomasz/storybook-op",
-  "version": "0.0.8",
+  "version": "0.0.11",
   "description": "Design System Component Library for OP",
   "license": "MIT",
   "author": {
@@ -24,7 +24,8 @@
     "knip": "knip",
     "lint": "TIMING=1 eslint src/**/*.ts* --fix",
     "lint:style": "TIMING=1 stylelint **/*.scss",
-    "test": "jest"
+    "test": "jest",
+    "prepublish": "npm run build"
   },
   "sideEffects": false,
   "types": "./dist/index.d.ts",
